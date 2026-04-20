@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery page for Kings College Budo showing academics, facilities, sports, events, student life, and videos.">
+  <title>Gallery | Kings College Budo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header section with school identity -->
+  <header class="site-header">
+    <div class="brand-wrapper container">
+      <img src="images/logo.jpg" alt="Kings College Budo logo" class="school-logo">
+      <div class="brand-text">
+        <h1>Kings College Budo</h1>
+        <p class="motto">Gakyali Mabaga</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation section -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="home.html" class="nav-home">Home</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page header section -->
+    <section class="gallery-hero reveal-on-scroll">
+      <div class="gallery-hero-overlay"></div>
+      <div class="container gallery-hero-content">
+        <h2>Gallery</h2>
+        <p>
+          Explore life at Kings College Budo through academics, sports, facilities,
+          events, and student life.
+        </p>
+      </div>
+    </section>
+
+    <!-- Category filter buttons -->
+    <section class="gallery-section reveal-on-scroll">
+      <div class="container">
+        <div class="gallery-filter" role="group" aria-label="Gallery categories">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="academics">Academics</button>
+          <button class="filter-btn" data-filter="facilities">Facilities</button>
+          <button class="filter-btn" data-filter="sports">Sports</button>
+          <button class="filter-btn" data-filter="events">Events</button>
+          <button class="filter-btn" data-filter="student-life">Student Life</button>
+          <button class="filter-btn" data-filter="videos">Videos</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery grid section -->
+    <section class="gallery-section gallery-section-light reveal-on-scroll">
+      <div class="container">
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Image cards -->
+          <figure class="gallery-card" data-category="academics image">
+            <img src="images/img1.jpg" alt="Students in academics session" class="gallery-image">
+            <figcaption>Academic excellence in classroom learning.</figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="facilities image">
+            <img src="images/histry1.jpg" alt="School facilities and compound view" class="gallery-image">
+            <figcaption>Modern facilities that support learning.</figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="sports image">
+            <img src="images/games.jpg" alt="Students participating in sports" class="gallery-image">
+            <figcaption>Sports activities that build teamwork and discipline.</figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="events image">
+            <img src="images/histry.jpg" alt="School event highlights" class="gallery-image">
+            <figcaption>School events that strengthen community spirit.</figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="student-life image">
+            <img src="images/leadership.jpg" alt="Student leadership and discipline" class="gallery-image">
+            <figcaption>Student leadership and mentorship programs.</figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="sports student-life image">
+            <img src="images/games1.jpg" alt="Students engaged in games and co-curricular activities" class="gallery-image">
+            <figcaption>Balanced growth through games and co-curricular activities.</figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="academics facilities image">
+            <img src="images/img2.jpg" alt="School environment and learning culture" class="gallery-image">
+            <figcaption>A disciplined environment for academic growth.</figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="events student-life image">
+            <img src="images/img3.jpg" alt="Student life and memorable moments" class="gallery-image">
+            <figcaption>Memorable moments in student life at Kings College Budo.</figcaption>
+          </figure>
+
+          <!-- Video cards -->
+          <figure class="gallery-card" data-category="videos academics">
+            <video controls preload="metadata" poster="images/img1.jpg" class="gallery-video">
+              <source src="videos/video1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Academic activities and class engagement (Video).</figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="videos sports">
+            <video controls preload="metadata" poster="images/games.jpg" class="gallery-video">
+              <source src="videos/video2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Sports and talent development highlights (Video).</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action section -->
+    <section class="gallery-cta reveal-on-scroll">
+      <div class="container gallery-cta-content">
+        <h3>Discover More About Kings College Budo</h3>
+        <p>Learn about our school and reach out for admissions and inquiries.</p>
+        <div class="hero-buttons">
+          <a href="about.html" class="btn btn-primary">Learn More</a>
+          <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox popup for images only -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview">&times;</button>
+    <img src="" alt="Expanded gallery view" id="lightboxImage">
+  </div>
+
+  <!-- Footer section -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Contact Information</h4>
+        <p>Kampala, Uganda</p>
+        <p>Phone: +256 700 000 000</p>
+        <p>Email: info@schoolname.com</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">X (Twitter)</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Kings College Budo. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
