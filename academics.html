@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academics page for Kings College Budo showcasing programs, departments, and academic excellence.">
+  <title>Academics | Kings College Budo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/academics.css">
+</head>
+<body>
+  <!-- Header section with school identity -->
+  <header class="site-header">
+    <div class="brand-wrapper container">
+      <img src="images/logo.jpg" alt="Kings College Budo logo" class="school-logo">
+      <div class="brand-text">
+        <h1>Kings College Budo</h1>
+        <p class="motto">Gakyali Mabaga</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation section -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="home.html" class="nav-home">Home</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html" aria-current="page">Academics</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page heading / intro -->
+    <section class="academics-hero">
+      <div class="academics-hero-overlay"></div>
+      <div class="container academics-hero-content">
+        <h2>Academics</h2>
+        <p>
+          Kings College Budo is committed to academic excellence through rigorous teaching,
+          strong values, and a balanced curriculum that prepares learners for lifelong success.
+        </p>
+      </div>
+    </section>
+
+    <!-- Programs section with interactive tabs -->
+    <section class="section-block">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h3>Our Programs</h3>
+          <p>Explore the two main academic pathways offered at the school.</p>
+        </div>
+
+        <div class="program-tabs" role="tablist" aria-label="Academic levels">
+          <button class="tab-btn active" data-level="olevel" role="tab" aria-selected="true">O-Level</button>
+          <button class="tab-btn" data-level="alevel" role="tab" aria-selected="false">A-Level</button>
+        </div>
+
+        <div class="program-grid">
+          <article class="program-card level-panel active" id="olevel-panel" data-level="olevel">
+            <img src="images/img1.jpg" alt="O-Level students in class" class="program-image">
+            <div class="program-card-body">
+              <h4>O-Level (Lower Secondary)</h4>
+              <p>
+                A strong lower secondary foundation focused on core competencies, character development,
+                and preparation for national examinations.
+              </p>
+              <p><strong>Duration:</strong> 4 years (Senior 1 - Senior 4)</p>
+              <p><strong>Sample Subjects:</strong> Mathematics, English, Physics, Chemistry, Biology, History, Geography, ICT</p>
+            </div>
+          </article>
+
+          <article class="program-card level-panel" id="alevel-panel" data-level="alevel">
+            <img src="images/img3.jpg" alt="A-Level laboratory practical session" class="program-image">
+            <div class="program-card-body">
+              <h4>A-Level (Upper Secondary)</h4>
+              <p>
+                A specialized upper secondary curriculum that deepens subject mastery, critical thinking,
+                and university/career readiness.
+              </p>
+              <p><strong>Duration:</strong> 2 years (Senior 5 - Senior 6)</p>
+              <p><strong>Sample Subjects:</strong> Mathematics, Physics, Chemistry, Biology, History, Geography, ICT, Economics</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subjects table section -->
+    <section class="section-block section-muted">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h3>Subjects Overview</h3>
+          <p>The table updates based on the selected academic level.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="subjects-table">
+            <thead>
+              <tr>
+                <th>Subject Name</th>
+                <th>Department</th>
+                <th>Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-level="olevel"><td>Mathematics</td><td>Science</td><td>O-Level</td></tr>
+              <tr data-level="olevel"><td>English</td><td>Arts</td><td>O-Level</td></tr>
+              <tr data-level="olevel"><td>Physics</td><td>Science</td><td>O-Level</td></tr>
+              <tr data-level="olevel"><td>Chemistry</td><td>Science</td><td>O-Level</td></tr>
+              <tr data-level="olevel"><td>Biology</td><td>Science</td><td>O-Level</td></tr>
+              <tr data-level="olevel"><td>History</td><td>Arts</td><td>O-Level</td></tr>
+              <tr data-level="olevel"><td>Geography</td><td>Arts</td><td>O-Level</td></tr>
+              <tr data-level="olevel"><td>ICT</td><td>ICT</td><td>O-Level</td></tr>
+
+              <tr data-level="alevel"><td>Mathematics</td><td>Science</td><td>A-Level</td></tr>
+              <tr data-level="alevel"><td>Physics</td><td>Science</td><td>A-Level</td></tr>
+              <tr data-level="alevel"><td>Chemistry</td><td>Science</td><td>A-Level</td></tr>
+              <tr data-level="alevel"><td>Biology</td><td>Science</td><td>A-Level</td></tr>
+              <tr data-level="alevel"><td>History</td><td>Arts</td><td>A-Level</td></tr>
+              <tr data-level="alevel"><td>Geography</td><td>Arts</td><td>A-Level</td></tr>
+              <tr data-level="alevel"><td>ICT</td><td>ICT</td><td>A-Level</td></tr>
+              <tr data-level="alevel"><td>English</td><td>Arts</td><td>A-Level</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments section -->
+    <section class="section-block">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h3>Departments</h3>
+          <p>Our departments provide focused support and mentoring for all learners.</p>
+        </div>
+        <div class="departments-grid">
+          <article class="department-card">
+            <h4>Science Department</h4>
+            <p>Promotes inquiry, experimentation, and analytical thinking through practical science education.</p>
+            <ul>
+              <li>Mathematics</li>
+              <li>Physics</li>
+              <li>Chemistry</li>
+              <li>Biology</li>
+            </ul>
+          </article>
+          <article class="department-card">
+            <h4>Arts Department</h4>
+            <p>Builds communication, interpretation, and civic understanding through humanities and languages.</p>
+            <ul>
+              <li>English</li>
+              <li>History</li>
+              <li>Geography</li>
+            </ul>
+          </article>
+          <article class="department-card">
+            <h4>ICT Department</h4>
+            <p>Develops digital fluency and innovation through modern computing tools and guided projects.</p>
+            <ul>
+              <li>Computer Studies</li>
+              <li>ICT</li>
+              <li>Digital Research Skills</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaching approach section -->
+    <section class="section-block section-muted">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h3>Our Teaching Approach</h3>
+        </div>
+        <div class="approach-grid">
+          <article><h4>Practical Learning</h4><p>Hands-on activities, experiments, and projects strengthen conceptual understanding.</p></article>
+          <article><h4>ICT Integration</h4><p>Technology is integrated in classroom delivery, research, and student collaboration.</p></article>
+          <article><h4>Discipline and Mentorship</h4><p>Guided mentorship and strong discipline shape responsible, focused learners.</p></article>
+          <article><h4>Examination Preparation</h4><p>Structured revision plans and assessment tracking prepare students for UNEB excellence.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements section -->
+    <section class="section-block achievements">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h3>Academic Achievements</h3>
+        </div>
+        <ul class="achievements-list">
+          <li>Consistently strong UNEB performance across both O-Level and A-Level.</li>
+          <li>Regular participation and wins in national and regional academic competitions.</li>
+          <li>Outstanding student achievements in science, debate, and innovation programs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Call to action section -->
+    <section class="academics-cta">
+      <div class="container academics-cta-content">
+        <h3>Join a Tradition of Academic Excellence</h3>
+        <p>Take the next step and become part of Kings College Budo.</p>
+        <div class="hero-buttons">
+          <a href="contact.html" class="btn btn-primary">Apply Now</a>
+          <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer section -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Contact Information</h4>
+        <p>Kampala, Uganda</p>
+        <p>Phone: +256 700 000 000</p>
+        <p>Email: info@schoolname.com</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">X (Twitter)</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Kings College Budo. All rights reserved.</p>
+  </footer>
+
+  <script src="js/style.js"></script>
+  <script src="js/academics.js"></script>
+</body>
+</html>
