@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact and registration page for Kings College Budo.">
+  <title>Contact / Registration | Kings College Budo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header section with school identity -->
+  <header class="site-header">
+    <div class="brand-wrapper container">
+      <img src="images/logo.jpg" alt="Kings College Budo logo" class="school-logo">
+      <div class="brand-text">
+        <h1>Kings College Budo</h1>
+        <p class="motto">Gakyali Mabaga</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation section -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="home.html" class="nav-home">Home</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page header section -->
+    <section class="contact-hero reveal-on-scroll">
+      <div class="contact-hero-overlay"></div>
+      <div class="container contact-hero-content">
+        <h2>Contact / Registration</h2>
+        <p>
+          You are welcome to Kings College Budo. Please fill in the form below
+          to register or send us your inquiry.
+        </p>
+      </div>
+    </section>
+
+    <!-- Registration form section -->
+    <section class="contact-section reveal-on-scroll">
+      <div class="container">
+        <div class="form-card">
+          <h3>Student Registration Form</h3>
+          <p class="form-intro">All fields marked with * are required.</p>
+
+          <form id="registrationForm" novalidate>
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Enter full name">
+              <small class="error-text" id="fullNameError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="Enter email address">
+              <small class="error-text" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
+              <small class="error-text" id="phoneError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="year">Year *</label>
+              <input type="text" id="year" name="year" placeholder="Example: Senior 1 or 2026 Intake">
+              <small class="error-text" id="yearError"></small>
+            </div>
+
+            <fieldset class="form-group">
+              <legend>Program *</legend>
+              <div class="options-row">
+                <label class="option-item"><input type="radio" name="program" value="O-Level"> O-Level</label>
+                <label class="option-item"><input type="radio" name="program" value="A-Level"> A-Level</label>
+              </div>
+              <small class="error-text" id="programError"></small>
+            </fieldset>
+
+            <fieldset class="form-group">
+              <legend>Gender</legend>
+              <div class="options-row">
+                <label class="option-item"><input type="radio" name="gender" value="Male"> Male</label>
+                <label class="option-item"><input type="radio" name="gender" value="Female"> Female</label>
+              </div>
+            </fieldset>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Type your message"></textarea>
+            </div>
+
+            <div class="form-group terms-group">
+              <label class="option-item">
+                <input type="checkbox" id="terms" name="terms">
+                I agree to the Terms and Conditions *
+              </label>
+              <small class="error-text" id="termsError"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn">Submit Registration</button>
+            <p class="success-text" id="successMessage"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer section -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Contact Information</h4>
+        <p>Kampala, Uganda</p>
+        <p>Phone: +256 700 000 000</p>
+        <p>Email: info@schoolname.com</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Admissions</h4>
+        <p>Reach out for enrollment guidance and support.</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Kings College Budo. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
