@@ -831,6 +831,11 @@ a {
   color: var(--primary-red);
   margin-bottom: 0.2rem;
 }
+video {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
 
 .form-intro {
   color: #5a5a5a;
@@ -937,5 +942,179 @@ fieldset.form-group {
 @media (max-width: 640px) {
   .form-card {
     padding: 1rem 0.9rem 1.15rem;
+  }
+}
+
+/* ================================
+   REELS PAGE STYLES
+================================ */
+.reels-hero {
+  position: relative;
+  min-height: 36vh;
+  display: grid;
+  align-items: center;
+  background: url("../images/img3.jpg") center/cover no-repeat;
+}
+
+.reels-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.reels-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--white);
+  padding: 1.8rem 0;
+}
+
+.reels-hero-content h2 {
+  font-size: clamp(1.9rem, 4.8vw, 2.7rem);
+  margin-bottom: 0.6rem;
+}
+
+.reels-section {
+  background: var(--light-bg);
+  padding: 2rem 0 3.1rem;
+}
+
+.reels-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  align-items: center;
+}
+
+.reel-card {
+  width: min(560px, 100%);
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.reel-video-wrap {
+  background: #111;
+  display: flex;
+  justify-content: center;
+}
+
+.reel-video {
+  width: min(100%, 420px);
+  height: min(78vh, 700px);
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.reel-info {
+  padding: 0.85rem 1rem 0.6rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.reel-title {
+  color: var(--primary-red);
+  margin-bottom: 0.55rem;
+  font-size: 1.02rem;
+}
+
+.like-btn {
+  border: none;
+  background: #ffeaea;
+  color: var(--primary-red);
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.like-btn:hover {
+  background: #ffd4d4;
+}
+
+.like-btn.liked {
+  background: var(--primary-red);
+  color: var(--white);
+}
+
+.like-icon {
+  margin-right: 0.2rem;
+}
+
+.like-count {
+  margin-top: 0.5rem;
+  color: #3d3d3d;
+  font-size: 0.92rem;
+}
+
+.comments-area {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.comments-area h4 {
+  color: var(--blue-accent);
+  margin-bottom: 0.45rem;
+}
+
+.comment-input-row {
+  display: flex;
+  gap: 0.45rem;
+  margin-bottom: 0.6rem;
+}
+
+.comment-input {
+  flex: 1;
+  border: 1.5px solid #d8d8d8;
+  border-radius: 8px;
+  padding: 0.58rem 0.65rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comment-input:focus {
+  border-color: var(--blue-accent);
+  box-shadow: 0 0 0 3px rgba(27, 92, 255, 0.14);
+  outline: none;
+}
+
+.comment-btn {
+  border: none;
+  border-radius: 8px;
+  background: var(--blue-accent);
+  color: var(--white);
+  padding: 0.58rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.comment-btn:hover {
+  background: #1148cc;
+}
+
+.comments-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.comments-list li {
+  background: #f6f8ff;
+  border-left: 3px solid var(--blue-accent);
+  border-radius: 8px;
+  padding: 0.48rem 0.58rem;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 620px) {
+  .reel-video {
+    height: 70vh;
+  }
+
+  .comment-input-row {
+    flex-direction: column;
   }
 }

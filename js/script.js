@@ -252,3 +252,99 @@ if (registrationForm) {
     }
   });
 }
+
+// Reels page features: likes, comments, localStorage, and single-video playback.
+const reelCards = document.querySelectorAll(".reel-card");
+
+if (reelCards.length > 0) {
+  const reelsStorageKey = "kcbReelsData";
+
+  function loadReelsData() {
+    try {
+      return JSON.parse(localStorage.getItem(reelsStorageKey)) || {};
+    } catch (error) {
+      return {};
+    }
+  }
+
+  function saveReelsData(data) {
+    localStorage.setItem(reelsStorageKey, JSON.stringify(data));
+  }
+
+  const reelsData = loadReelsData();
+
+  function ensureReelData(reelId) {
+    if (!reelsData[reelId]) {
+      reelsData[reelId] = {
+        likes: 0,
+        liked: false,
+        comments: [],
+      };
+    }
+  }
+
+  function renderLikes(reelId, likeButton, likeCountElement) {
+    const { likes, liked } = reelsData[reelId];
+    likeCountElement.textContent = `${likes} ${likes === 1 ? "like" : "likes"}`;
+    likeButton.classList.toggle("liked", liked);
+  }
+
+  function renderComments(reelId, commentsListElement) {
+    commentsListElement.innerHTML = "";
+    reelsData[reelId].comments.forEach((comment) => {
+      const commentItem = document.createElement("li");
+      commentItem.textContent = comment;
+      commentsListElement.appendChild(commentItem);
+    });
+  }
+
+  reelCards.forEach((card) => {
+    const reelId = card.dataset.reelId;
+    ensureReelData(reelId);
+
+    const likeButton = card.querySelector(".like-btn");
+    const likeCountElement = card.querySelector(".like-count");
+    const commentInput = card.querySelector(".comment-input");
+    const commentButton = card.querySelector(".comment-btn");
+    const commentsListElement = card.querySelector(".comments-list");
+
+    renderLikes(reelId, likeButton, likeCountElement);
+    renderComments(reelId, commentsListElement);
+
+    likeButton.addEventListener("click", () => {
+      reelsData[reelId].liked = !reelsData[reelId].liked;
+      reelsData[reelId].likes += reelsData[reelId].liked ? 1 : -1;
+
+      if (reelsData[reelId].likes < 0) {
+        reelsData[reelId].likes = 0;
+      }
+
+      renderLikes(reelId, likeButton, likeCountElement);
+      saveReelsData(reelsData);
+    });
+
+    commentButton.addEventListener("click", () => {
+      const commentText = commentInput.value.trim();
+      if (commentText === "") {
+        return;
+      }
+
+      reelsData[reelId].comments.push(commentText);
+      renderComments(reelId, commentsListElement);
+      saveReelsData(reelsData);
+      commentInput.value = "";
+    });
+  });
+
+  // Pause other videos when one video starts playing.
+  const reelVideos = document.querySelectorAll(".reel-video");
+  reelVideos.forEach((video) => {
+    video.addEventListener("play", () => {
+      reelVideos.forEach((otherVideo) => {
+        if (otherVideo !== video) {
+          otherVideo.pause();
+        }
+      });
+    });
+  });
+}
