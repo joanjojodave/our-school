@@ -8,47 +8,63 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/academics.css">
 </head>
 <body>
-  <!-- Header section with school identity -->
+  <!-- Header section with top info strip and navigation -->
   <header class="site-header">
-    <div class="brand-wrapper container">
-      <img src="images/logo.jpg" alt="Kings College Budo logo" class="school-logo">
-      <div class="brand-text">
-        <h1>Kings College Budo</h1>
-        <p class="motto">Gakyali Mabaga</p>
+    <div class="header-topbar">
+      <div class="container topbar-inner">
+        <p class="topbar-item"><span class="material-symbols-outlined" aria-hidden="true">call</span>+256 414 373760</p>
+        <p class="topbar-item"><span class="material-symbols-outlined" aria-hidden="true">mail</span>info@kingscollegebudo.ac.ug</p>
       </div>
     </div>
-  </header>
 
-  <!-- Navigation section -->
-  <nav class="site-nav" aria-label="Main navigation">
-    <div class="container nav-inner">
-      <a href="home.html" class="nav-home">Home</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="about.html">About</a></li>
-        <li><a href="academics.html" aria-current="page">Academics</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a href="home.html" class="brand-wrapper" aria-label="Kings College Budo home page">
+          <img src="images/logo.jpg" alt="Kings College Budo logo" class="school-logo">
+          <div class="brand-text">
+            <h1>Kings College, Budo</h1>
+            <p class="motto">Gakyali Mabaga</p>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html" aria-current="page">Academics</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reels.html">Reels</a></li>
+        </ul>
+
+        <a href="contact.html" class="header-cta">Contact Us</a>
+      </div>
+    </nav>
+  </header>
 
   <main>
     <!-- Page heading / intro -->
     <section class="academics-hero">
       <div class="academics-hero-overlay"></div>
       <div class="container academics-hero-content">
+        <p class="academics-hero-tag">Academic Excellence</p>
         <h2>Academics</h2>
         <p>
           Kings College Budo is committed to academic excellence through rigorous teaching,
           strong values, and a balanced curriculum that prepares learners for lifelong success.
         </p>
+        <div class="academics-hero-highlights">
+          <p><span class="material-symbols-outlined" aria-hidden="true">school</span>O-Level & A-Level Programs</p>
+          <p><span class="material-symbols-outlined" aria-hidden="true">science</span>Strong Practical Learning</p>
+          <p><span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>UNEB-Focused Excellence</p>
+        </div>
       </div>
     </section>
 
@@ -56,6 +72,7 @@
     <section class="section-block">
       <div class="container">
         <div class="section-title-wrap">
+          <p class="section-kicker">Programs</p>
           <h3>Our Programs</h3>
           <p>Explore the two main academic pathways offered at the school.</p>
         </div>
@@ -70,12 +87,21 @@
             <img src="images/img1.jpg" alt="O-Level students in class" class="program-image">
             <div class="program-card-body">
               <h4>O-Level (Lower Secondary)</h4>
-              <p>
+              <p class="program-summary">
                 A strong lower secondary foundation focused on core competencies, character development,
                 and preparation for national examinations.
               </p>
-              <p><strong>Duration:</strong> 4 years (Senior 1 - Senior 4)</p>
-              <p><strong>Sample Subjects:</strong> Mathematics, English, Physics, Chemistry, Biology, History, Geography, ICT</p>
+              <div class="program-meta">
+                <p><span class="material-symbols-outlined" aria-hidden="true">schedule</span><strong>Duration:</strong> 4 years (Senior 1 - Senior 4)</p>
+                <p><span class="material-symbols-outlined" aria-hidden="true">trending_up</span><strong>Focus:</strong> Strong foundational mastery</p>
+              </div>
+              <div class="program-subjects">
+                <span>Mathematics</span><span>English</span><span>Physics</span><span>Chemistry</span>
+                <span>Biology</span><span>History</span><span>Geography</span><span>ICT</span>
+              </div>
+              <div class="program-actions">
+                <a href="#subjects-overview" class="program-link">View subject table <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+              </div>
             </div>
           </article>
 
@@ -83,12 +109,21 @@
             <img src="images/img3.jpg" alt="A-Level laboratory practical session" class="program-image">
             <div class="program-card-body">
               <h4>A-Level (Upper Secondary)</h4>
-              <p>
+              <p class="program-summary">
                 A specialized upper secondary curriculum that deepens subject mastery, critical thinking,
                 and university/career readiness.
               </p>
-              <p><strong>Duration:</strong> 2 years (Senior 5 - Senior 6)</p>
-              <p><strong>Sample Subjects:</strong> Mathematics, Physics, Chemistry, Biology, History, Geography, ICT, Economics</p>
+              <div class="program-meta">
+                <p><span class="material-symbols-outlined" aria-hidden="true">schedule</span><strong>Duration:</strong> 2 years (Senior 5 - Senior 6)</p>
+                <p><span class="material-symbols-outlined" aria-hidden="true">school</span><strong>Focus:</strong> University and career readiness</p>
+              </div>
+              <div class="program-subjects">
+                <span>Mathematics</span><span>Physics</span><span>Chemistry</span><span>Biology</span>
+                <span>History</span><span>Geography</span><span>ICT</span><span>Economics</span>
+              </div>
+              <div class="program-actions">
+                <a href="#subjects-overview" class="program-link">View subject table <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+              </div>
             </div>
           </article>
         </div>
@@ -96,9 +131,10 @@
     </section>
 
     <!-- Subjects table section -->
-    <section class="section-block section-muted">
+    <section class="section-block section-muted" id="subjects-overview">
       <div class="container">
         <div class="section-title-wrap">
+          <p class="section-kicker">Curriculum</p>
           <h3>Subjects Overview</h3>
           <p>The table updates based on the selected academic level.</p>
         </div>
@@ -139,37 +175,50 @@
     <section class="section-block">
       <div class="container">
         <div class="section-title-wrap">
+          <p class="section-kicker">Support Structure</p>
           <h3>Departments</h3>
           <p>Our departments provide focused support and mentoring for all learners.</p>
         </div>
         <div class="departments-grid">
           <article class="department-card">
-            <h4>Science Department</h4>
+            <div class="department-head">
+              <h4><span class="material-symbols-outlined" aria-hidden="true">science</span>Science Department</h4>
+              <p class="department-badge">Core STEM</p>
+            </div>
             <p>Promotes inquiry, experimentation, and analytical thinking through practical science education.</p>
-            <ul>
-              <li>Mathematics</li>
-              <li>Physics</li>
-              <li>Chemistry</li>
-              <li>Biology</li>
-            </ul>
+            <div class="department-subjects">
+              <span>Mathematics</span>
+              <span>Physics</span>
+              <span>Chemistry</span>
+              <span>Biology</span>
+            </div>
+            <p class="department-note"><span class="material-symbols-outlined" aria-hidden="true">biotech</span>Hands-on practical sessions and lab mentoring.</p>
           </article>
           <article class="department-card">
-            <h4>Arts Department</h4>
+            <div class="department-head">
+              <h4><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Arts Department</h4>
+              <p class="department-badge">Humanities</p>
+            </div>
             <p>Builds communication, interpretation, and civic understanding through humanities and languages.</p>
-            <ul>
-              <li>English</li>
-              <li>History</li>
-              <li>Geography</li>
-            </ul>
+            <div class="department-subjects">
+              <span>English</span>
+              <span>History</span>
+              <span>Geography</span>
+            </div>
+            <p class="department-note"><span class="material-symbols-outlined" aria-hidden="true">forum</span>Debate, writing, and communication development.</p>
           </article>
           <article class="department-card">
-            <h4>ICT Department</h4>
+            <div class="department-head">
+              <h4><span class="material-symbols-outlined" aria-hidden="true">computer</span>ICT Department</h4>
+              <p class="department-badge">Digital Skills</p>
+            </div>
             <p>Develops digital fluency and innovation through modern computing tools and guided projects.</p>
-            <ul>
-              <li>Computer Studies</li>
-              <li>ICT</li>
-              <li>Digital Research Skills</li>
-            </ul>
+            <div class="department-subjects">
+              <span>Computer Studies</span>
+              <span>ICT</span>
+              <span>Digital Research Skills</span>
+            </div>
+            <p class="department-note"><span class="material-symbols-outlined" aria-hidden="true">devices</span>Practical computing and digital project guidance.</p>
           </article>
         </div>
       </div>
@@ -179,13 +228,31 @@
     <section class="section-block section-muted">
       <div class="container">
         <div class="section-title-wrap">
+          <p class="section-kicker">Learning Method</p>
           <h3>Our Teaching Approach</h3>
+          <p>How we combine classroom excellence, mentorship, and practical learning outcomes.</p>
         </div>
         <div class="approach-grid">
-          <article><h4>Practical Learning</h4><p>Hands-on activities, experiments, and projects strengthen conceptual understanding.</p></article>
-          <article><h4>ICT Integration</h4><p>Technology is integrated in classroom delivery, research, and student collaboration.</p></article>
-          <article><h4>Discipline and Mentorship</h4><p>Guided mentorship and strong discipline shape responsible, focused learners.</p></article>
-          <article><h4>Examination Preparation</h4><p>Structured revision plans and assessment tracking prepare students for UNEB excellence.</p></article>
+          <article>
+            <h4><span class="material-symbols-outlined" aria-hidden="true">biotech</span>Practical Learning</h4>
+            <p>Hands-on activities, experiments, and projects strengthen conceptual understanding.</p>
+            <div class="approach-tags"><span>Lab Work</span><span>Project Tasks</span></div>
+          </article>
+          <article>
+            <h4><span class="material-symbols-outlined" aria-hidden="true">devices</span>ICT Integration</h4>
+            <p>Technology is integrated in classroom delivery, research, and student collaboration.</p>
+            <div class="approach-tags"><span>Digital Research</span><span>Classroom Tech</span></div>
+          </article>
+          <article>
+            <h4><span class="material-symbols-outlined" aria-hidden="true">groups</span>Discipline and Mentorship</h4>
+            <p>Guided mentorship and strong discipline shape responsible, focused learners.</p>
+            <div class="approach-tags"><span>Mentorship</span><span>Character Growth</span></div>
+          </article>
+          <article>
+            <h4><span class="material-symbols-outlined" aria-hidden="true">checklist</span>Examination Preparation</h4>
+            <p>Structured revision plans and assessment tracking prepare students for UNEB excellence.</p>
+            <div class="approach-tags"><span>Revision Plans</span><span>Assessment Tracking</span></div>
+          </article>
         </div>
       </div>
     </section>
@@ -193,25 +260,67 @@
     <!-- Achievements section -->
     <section class="section-block achievements">
       <div class="container">
-        <div class="section-title-wrap">
-          <h3>Academic Achievements</h3>
+        <div class="achievements-header">
+          <div class="section-title-wrap achievements-heading">
+            <p class="section-kicker">Performance</p>
+            <h3>Academic Achievements</h3>
+            <p>A record of excellence built through discipline, preparation, and innovation.</p>
+          </div>
+          <div class="achievements-stats">
+            <article>
+              <strong>Top</strong>
+              <span>UNEB Results</span>
+            </article>
+            <article>
+              <strong>National</strong>
+              <span>Competition Presence</span>
+            </article>
+            <article>
+              <strong>STEM + Arts</strong>
+              <span>Balanced Achievement</span>
+            </article>
+          </div>
         </div>
-        <ul class="achievements-list">
-          <li>Consistently strong UNEB performance across both O-Level and A-Level.</li>
-          <li>Regular participation and wins in national and regional academic competitions.</li>
-          <li>Outstanding student achievements in science, debate, and innovation programs.</li>
-        </ul>
+        <div class="achievements-grid">
+          <article class="achievement-card">
+            <span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>
+            <div>
+              <h4>Consistent UNEB Excellence</h4>
+              <p>Consistently strong UNEB performance across both O-Level and A-Level.</p>
+            </div>
+          </article>
+          <article class="achievement-card">
+            <span class="material-symbols-outlined" aria-hidden="true">emoji_events</span>
+            <div>
+              <h4>Competitive Distinction</h4>
+              <p>Regular participation and wins in national and regional academic competitions.</p>
+            </div>
+          </article>
+          <article class="achievement-card">
+            <span class="material-symbols-outlined" aria-hidden="true">science</span>
+            <div>
+              <h4>Innovation and Debate Success</h4>
+              <p>Outstanding student achievements in science, debate, and innovation programs.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- Call to action section -->
     <section class="academics-cta">
       <div class="container academics-cta-content">
+        <p class="academics-cta-tag">Take the Next Step</p>
         <h3>Join a Tradition of Academic Excellence</h3>
         <p>Take the next step and become part of Kings College Budo.</p>
+        <div class="academics-cta-points">
+          <p><span class="material-symbols-outlined" aria-hidden="true">school</span>Strong academic culture</p>
+          <p><span class="material-symbols-outlined" aria-hidden="true">groups</span>Mentorship and guidance</p>
+          <p><span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>Future-ready pathways</p>
+        </div>
         <div class="hero-buttons">
-          <a href="contact.html" class="btn btn-primary">Apply Now</a>
-          <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+          <a href="contact.html" class="btn btn-primary"><span class="material-symbols-outlined" aria-hidden="true">edit_square</span>Apply Now</a>
+          <a href="contact.html" class="btn btn-secondary"><span class="material-symbols-outlined" aria-hidden="true">mail</span>Contact Us</a>
         </div>
       </div>
     </section>
@@ -219,30 +328,70 @@
 
   <!-- Footer section -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Contact Information</h4>
-        <p>Kampala, Uganda</p>
-        <p>Phone: +256 700 000 000</p>
-        <p>Email: info@schoolname.com</p>
+    <div class="container footer-top">
+      <div class="footer-col footer-brand">
+        <div class="footer-logo-row">
+          <img src="images/logo.jpg" alt="Kings College Budo logo" class="footer-logo">
+          <div>
+            <h4>Kings College, Budo</h4>
+            <p class="footer-motto">Gakyali Mabaga</p>
+          </div>
+        </div>
+        <p class="footer-description">
+          Kings College, Budo is a prestigious secondary school in Uganda established in 1906.
+        </p>
       </div>
-      <div>
+
+      <div class="footer-col">
         <h4>Quick Links</h4>
-        <ul>
+        <ul class="footer-links">
+          <li><a href="home.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="academics.html">Academics</a></li>
           <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reels.html">Reels</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-      <div>
+
+      <div class="footer-col">
         <h4>Follow Us</h4>
-        <ul>
+        <ul class="footer-links">
           <li><a href="#">Facebook</a></li>
           <li><a href="#">X (Twitter)</a></li>
           <li><a href="#">Instagram</a></li>
           <li><a href="#">YouTube</a></li>
         </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Admissions</h4>
+        <p class="footer-description">Reach out for enrollment guidance and support.</p>
+        <a href="contact.html" class="footer-mini-cta">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="container footer-contact-strip">
+      <div class="footer-contact-card">
+        <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+        <div>
+          <h5>Visit Us</h5>
+          <p>Kampala, Uganda</p>
+        </div>
+      </div>
+      <div class="footer-contact-card">
+        <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+        <div>
+          <h5>Email Us</h5>
+          <p>info@kcb.com</p>
+        </div>
+      </div>
+      <div class="footer-contact-card">
+        <span class="material-symbols-outlined" aria-hidden="true">call</span>
+        <div>
+          <h5>Call Us</h5>
+          <p>+256 414 373760</p>
+        </div>
       </div>
     </div>
     <p class="copyright">&copy; 2026 Kings College Budo. All rights reserved.</p>

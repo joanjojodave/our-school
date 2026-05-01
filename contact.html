@@ -8,35 +8,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Header section with school identity -->
+  <!-- Header section with top info strip and navigation -->
   <header class="site-header">
-    <div class="brand-wrapper container">
-      <img src="images/logo.jpg" alt="Kings College Budo logo" class="school-logo">
-      <div class="brand-text">
-        <h1>Kings College Budo</h1>
-        <p class="motto">Gakyali Mabaga</p>
+    <div class="header-topbar">
+      <div class="container topbar-inner">
+        <p class="topbar-item"><span class="material-symbols-outlined" aria-hidden="true">call</span>+256 414 373760</p>
+        <p class="topbar-item"><span class="material-symbols-outlined" aria-hidden="true">mail</span>info@kingscollegebudo.ac.ug</p>
       </div>
     </div>
-  </header>
 
-  <!-- Navigation section -->
-  <nav class="site-nav" aria-label="Main navigation">
-    <div class="container nav-inner">
-      <a href="home.html" class="nav-home">Home</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="about.html">About</a></li>
-        <li><a href="academics.html">Academics</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html" aria-current="page">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a href="home.html" class="brand-wrapper" aria-label="Kings College Budo home page">
+          <img src="images/logo.jpg" alt="Kings College Budo logo" class="school-logo">
+          <div class="brand-text">
+            <h1>Kings College, Budo</h1>
+            <p class="motto">Gakyali Mabaga</p>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="reels.html">Reels</a></li>
+        </ul>
+
+        <a href="contact.html" class="header-cta">Contact Us</a>
+      </div>
+    </nav>
+  </header>
 
   <main>
     <!-- Page header section -->
@@ -53,97 +64,162 @@
 
     <!-- Registration form section -->
     <section class="contact-section reveal-on-scroll">
-      <div class="container">
+      <div class="container contact-layout">
         <div class="form-card">
-          <h3>Student Registration Form</h3>
+          <h3>Send Us a Message</h3>
           <p class="form-intro">All fields marked with * are required.</p>
 
           <form id="registrationForm" novalidate>
             <div class="form-group">
               <label for="fullName">Full Name *</label>
-              <input type="text" id="fullName" name="fullName" placeholder="Enter full name">
+              <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
               <small class="error-text" id="fullNameError"></small>
             </div>
 
             <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" placeholder="Enter email address">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com">
               <small class="error-text" id="emailError"></small>
             </div>
 
             <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
-              <small class="error-text" id="phoneError"></small>
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" placeholder="Subject of your message">
+              <small class="error-text" id="subjectError"></small>
             </div>
 
             <div class="form-group">
-              <label for="year">Year *</label>
-              <input type="text" id="year" name="year" placeholder="Example: Senior 1 or 2026 Intake">
-              <small class="error-text" id="yearError"></small>
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Enter your message here..."></textarea>
+              <small class="error-text" id="messageError"></small>
             </div>
 
-            <fieldset class="form-group">
-              <legend>Program *</legend>
-              <div class="options-row">
-                <label class="option-item"><input type="radio" name="program" value="O-Level"> O-Level</label>
-                <label class="option-item"><input type="radio" name="program" value="A-Level"> A-Level</label>
-              </div>
-              <small class="error-text" id="programError"></small>
-            </fieldset>
-
-            <fieldset class="form-group">
-              <legend>Gender</legend>
-              <div class="options-row">
-                <label class="option-item"><input type="radio" name="gender" value="Male"> Male</label>
-                <label class="option-item"><input type="radio" name="gender" value="Female"> Female</label>
-              </div>
-            </fieldset>
-
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Type your message"></textarea>
-            </div>
-
-            <div class="form-group terms-group">
-              <label class="option-item">
-                <input type="checkbox" id="terms" name="terms">
-                I agree to the Terms and Conditions *
-              </label>
-              <small class="error-text" id="termsError"></small>
-            </div>
-
-            <button type="submit" class="btn btn-primary submit-btn">Submit Registration</button>
+            <button type="submit" class="btn btn-primary submit-btn">
+              Send Message
+              <span class="material-symbols-outlined" aria-hidden="true">send</span>
+            </button>
             <p class="success-text" id="successMessage"></p>
           </form>
         </div>
+
+        <div class="contact-right-col">
+          <aside class="contact-info-panel" aria-label="Contact information">
+            <h3>Contact Information</h3>
+
+            <article class="contact-info-card">
+              <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+              <div>
+                <h4>Address</h4>
+                <p>Naggalabi Hill, Wakiso District, Uganda (off the Kampala-Masaka Road).</p>
+              </div>
+            </article>
+
+            <article class="contact-info-card">
+              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+              <div>
+                <h4>Email</h4>
+                <p>info@kingscollegebudo.ac.ug</p>
+              </div>
+            </article>
+
+            <article class="contact-info-card">
+              <span class="material-symbols-outlined" aria-hidden="true">call</span>
+              <div>
+                <h4>Phone Contacts</h4>
+                <p>Main Reception: +256 414 373760</p>
+                <p>Bursar's Accounts: +256 778 065776</p>
+                <p>HM Secretary: +256 414 373760</p>
+                <p>Alumni Relations: +256 751 582683</p>
+              </div>
+            </article>
+
+            <article class="contact-info-card">
+              <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+              <div>
+                <h4>Office Hours</h4>
+                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+              </div>
+            </article>
+          </aside>
+
+          <div class="form-support-note" aria-label="Support details">
+            <p><span class="material-symbols-outlined" aria-hidden="true">schedule</span>Typical response time: within 24 hours</p>
+            <p><span class="material-symbols-outlined" aria-hidden="true">support_agent</span>Support available Monday - Friday, 8:00 AM - 5:00 PM</p>
+            <p><span class="material-symbols-outlined" aria-hidden="true">task_alt</span>Please include your full name and a clear subject for faster support.</p>
+            <p><span class="material-symbols-outlined" aria-hidden="true">phone_in_talk</span>For urgent inquiries, call the main reception during office hours.</p>
+            <p><span class="material-symbols-outlined" aria-hidden="true">verified_user</span>Your information is handled with confidentiality and care.</p>
+          </div>
+        </div>
       </div>
-    </section>
+      </section>
   </main>
 
   <!-- Footer section -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Contact Information</h4>
-        <p>Kampala, Uganda</p>
-        <p>Phone: +256 700 000 000</p>
-        <p>Email: kcb.com</p>
+    <div class="container footer-top">
+      <div class="footer-col footer-brand">
+        <div class="footer-logo-row">
+          <img src="images/logo.jpg" alt="Kings College Budo logo" class="footer-logo">
+          <div>
+            <h4>Kings College, Budo</h4>
+            <p class="footer-motto">Gakyali Mabaga</p>
+          </div>
+        </div>
+        <p class="footer-description">
+          Kings College, Budo is a prestigious secondary school in Uganda established in 1906.
+        </p>
       </div>
-      <div>
+
+      <div class="footer-col">
         <h4>Quick Links</h4>
-        <ul>
+        <ul class="footer-links">
           <li><a href="home.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="academics.html">Academics</a></li>
           <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reels.html">Reels</a></li>
           <li><a href="contact.html">Contact</a></li>
-        <li><a href="reels.html">Reels</a></li>
         </ul>
       </div>
-      <div>
+
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul class="footer-links">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">X (Twitter)</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
         <h4>Admissions</h4>
-        <p>Reach out for enrollment guidance and support.</p>
+        <p class="footer-description">Reach out for enrollment guidance and support.</p>
+        <a href="contact.html" class="footer-mini-cta">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="container footer-contact-strip">
+      <div class="footer-contact-card">
+        <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+        <div>
+          <h5>Visit Us</h5>
+          <p>Kampala, Uganda</p>
+        </div>
+      </div>
+      <div class="footer-contact-card">
+        <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+        <div>
+          <h5>Email Us</h5>
+          <p>info@kcb.com</p>
+        </div>
+      </div>
+      <div class="footer-contact-card">
+        <span class="material-symbols-outlined" aria-hidden="true">call</span>
+        <div>
+          <h5>Call Us</h5>
+          <p>+256 414 373760</p>
+        </div>
       </div>
     </div>
     <p class="copyright">&copy; 2026 Kings College Budo. All rights reserved.</p>

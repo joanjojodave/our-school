@@ -8,46 +8,62 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Header section with school identity -->
+  <!-- Header section with top info strip and navigation -->
   <header class="site-header">
-    <div class="brand-wrapper container">
-      <img src="images/logo.jpg" alt="Kings College Budo logo" class="school-logo">
-      <div class="brand-text">
-        <h1>Kings College Budo</h1>
-        <p class="motto">Gakyali Mabaga</p>
+    <div class="header-topbar">
+      <div class="container topbar-inner">
+        <p class="topbar-item"><span class="material-symbols-outlined" aria-hidden="true">call</span>+256 414 373760</p>
+        <p class="topbar-item"><span class="material-symbols-outlined" aria-hidden="true">mail</span>info@kingscollegebudo.ac.ug</p>
       </div>
     </div>
-  </header>
 
-  <!-- Navigation section -->
-  <nav class="site-nav" aria-label="Main navigation">
-    <div class="container nav-inner">
-      <a href="home.html" class="nav-home">Home</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="about.html" aria-current="page">About</a></li>
-        <li><a href="academics.html">Academics</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a href="home.html" class="brand-wrapper" aria-label="Kings College Budo home page">
+          <img src="images/logo.jpg" alt="Kings College Budo logo" class="school-logo">
+          <div class="brand-text">
+            <h1>Kings College, Budo</h1>
+            <p class="motto">Gakyali Mabaga</p>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reels.html">Reels</a></li>
+        </ul>
+
+        <a href="contact.html" class="header-cta">Contact Us</a>
+      </div>
+    </nav>
+  </header>
 
   <main>
     <!-- About header section -->
     <section class="about-hero reveal-on-scroll">
       <div class="about-hero-overlay"></div>
       <div class="container about-hero-content">
+        <p class="about-hero-tag">Who We Are</p>
         <h2>About Us</h2>
         <p>
           Kings College Budo is a center of academic excellence, leadership, discipline,
           and holistic education dedicated to shaping future generations.
         </p>
+        <div class="about-hero-highlights">
+          <p><span class="material-symbols-outlined" aria-hidden="true">history_edu</span>Established 1906</p>
+          <p><span class="material-symbols-outlined" aria-hidden="true">school</span>Academic Excellence</p>
+          <p><span class="material-symbols-outlined" aria-hidden="true">military_tech</span>Leadership Tradition</p>
+        </div>
       </div>
     </section>
 
@@ -55,6 +71,7 @@
     <section class="about-section reveal-on-scroll">
       <div class="container school-overview">
         <div class="school-overview-text">
+          <p class="section-eyebrow">Our Identity</p>
           <h3>School Overview</h3>
           <p>
             Located in Kampala, Uganda, Kings College Budo is known for strong academics,
@@ -62,6 +79,11 @@
             high standards, experienced educators, and a values-based environment that
             supports every learner to grow in knowledge, responsibility, and confidence.
           </p>
+          <ul class="about-points">
+            <li>Values-based learning environment</li>
+            <li>Strong performance and student outcomes</li>
+            <li>Balanced growth in academics and character</li>
+          </ul>
         </div>
         <img src="images/histry1.jpg" alt="Kings College Budo school compound" class="school-overview-image">
       </div>
@@ -69,31 +91,58 @@
 
     <!-- Mission, vision, and values section -->
     <section class="about-section section-light reveal-on-scroll">
-      <div class="container">
+      <div class="container mvv-showcase">
         <div class="section-heading">
           <h3>Mission, Vision, and Core Values</h3>
+          <p class="mvv-intro">
+            These three pillars guide how we teach, lead, and build character in every learner.
+          </p>
         </div>
         <div class="mvv-grid">
-          <article class="info-card">
-            <h4>Mission</h4>
-            <p>
+          <article class="mvv-card mvv-card-mission">
+            <div class="mvv-card-head">
+              <span class="material-symbols-outlined" aria-hidden="true">flag</span>
+              <h4>Mission</h4>
+            </div>
+            <p class="mvv-main-text">
               To provide quality education that develops competent, disciplined, and
               morally upright students prepared for national and global impact.
             </p>
+            <ul class="mvv-list">
+              <li>Quality-centered learning</li>
+              <li>Discipline and responsibility</li>
+              <li>Impact beyond the classroom</li>
+            </ul>
           </article>
-          <article class="info-card">
-            <h4>Vision</h4>
-            <p>
+          <article class="mvv-card mvv-card-vision">
+            <div class="mvv-card-head">
+              <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
+              <h4>Vision</h4>
+            </div>
+            <p class="mvv-main-text">
               To be a leading institution in Uganda and beyond, recognized for academic
               excellence, innovation, and transformational leadership.
             </p>
+            <ul class="mvv-list">
+              <li>National and global excellence</li>
+              <li>Innovation in education</li>
+              <li>Transformational leadership</li>
+            </ul>
           </article>
-          <article class="info-card">
-            <h4>Core Values</h4>
-            <p>
+          <article class="mvv-card mvv-card-values">
+            <div class="mvv-card-head">
+              <span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>
+              <h4>Core Values</h4>
+            </div>
+            <p class="mvv-main-text">
               Integrity, discipline, excellence, teamwork, responsibility, and respect
               for self, others, and community.
             </p>
+            <ul class="mvv-list">
+              <li>Integrity and mutual respect</li>
+              <li>Teamwork and service</li>
+              <li>Excellence in all we do</li>
+            </ul>
           </article>
         </div>
       </div>
@@ -103,7 +152,8 @@
     <section class="about-section reveal-on-scroll">
       <div class="container history-layout">
         <img src="images/histry.jpg" alt="Historical image related to Kings College Budo" class="history-image">
-        <div>
+        <div class="history-text">
+          <p class="section-eyebrow">Our Heritage</p>
           <h3>School History</h3>
           <p>
             Over the years, Kings College Budo has built a proud legacy of educational
@@ -111,6 +161,11 @@
             committed to producing well-rounded learners through strong academics,
             leadership training, and meaningful service.
           </p>
+          <ul class="about-points">
+            <li>Over a century of educational excellence</li>
+            <li>Long-standing culture of discipline and service</li>
+            <li>Continuous growth in modern learning approaches</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -121,12 +176,43 @@
         <div class="section-heading">
           <h3>Our Facilities</h3>
         </div>
-        <div class="facilities-grid">
-          <article class="facility-card"><h4>Classrooms</h4><p>Modern and well-ventilated learning spaces for effective teaching and collaboration.</p></article>
-          <article class="facility-card"><h4>Library</h4><p>A rich academic resource center that supports reading culture and research skills.</p></article>
-          <article class="facility-card"><h4>Science Labs</h4><p>Equipped laboratories for practical experiments in Physics, Chemistry, and Biology.</p></article>
-          <article class="facility-card"><h4>Computer Lab</h4><p>ICT-enabled labs to build digital literacy and support technology-integrated learning.</p></article>
-          <article class="facility-card"><h4>Sports Grounds</h4><p>Quality sports facilities that nurture teamwork, fitness, and competitive excellence.</p></article>
+        <div class="facilities-grid" id="facilitiesGrid">
+          <article class="facility-card">
+            <h4><span class="material-symbols-outlined" aria-hidden="true">meeting_room</span>Classrooms</h4>
+            <p>Modern and well-ventilated learning spaces for effective teaching and collaboration.</p>
+            <div class="facility-meta"><span>Smart Boards</span><span>Group Learning</span></div>
+          </article>
+          <article class="facility-card">
+            <h4><span class="material-symbols-outlined" aria-hidden="true">local_library</span>Library</h4>
+            <p>A rich academic resource center that supports reading culture and research skills.</p>
+            <div class="facility-meta"><span>Reference Books</span><span>Quiet Study Zones</span></div>
+          </article>
+          <article class="facility-card">
+            <h4><span class="material-symbols-outlined" aria-hidden="true">science</span>Science Labs</h4>
+            <p>Equipped laboratories for practical experiments in Physics, Chemistry, and Biology.</p>
+            <div class="facility-meta"><span>Practical Sessions</span><span>Safety Equipped</span></div>
+          </article>
+          <article class="facility-card">
+            <h4><span class="material-symbols-outlined" aria-hidden="true">computer</span>Computer Lab</h4>
+            <p>ICT-enabled labs to build digital literacy and support technology-integrated learning.</p>
+            <div class="facility-meta"><span>Internet Access</span><span>Digital Skills</span></div>
+          </article>
+          <article class="facility-card">
+            <h4><span class="material-symbols-outlined" aria-hidden="true">sports_soccer</span>Sports Grounds</h4>
+            <p>Quality sports facilities that nurture teamwork, fitness, and competitive excellence.</p>
+            <div class="facility-meta"><span>Team Sports</span><span>Fitness Programs</span></div>
+          </article>
+        </div>
+        <div class="facilities-controls" aria-label="Facilities navigation">
+          <button type="button" class="facility-nav-btn" id="facilitiesPrev">
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+            Previous
+          </button>
+          <p class="facilities-status" id="facilitiesStatus" aria-live="polite"></p>
+          <button type="button" class="facility-nav-btn" id="facilitiesNext">
+            Next
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+          </button>
         </div>
       </div>
     </section>
@@ -136,36 +222,51 @@
       <div class="container">
         <div class="section-heading">
           <h3>Student Life and Leadership</h3>
+          <p class="student-life-intro">
+            Beyond academics, learners grow through leadership, service, clubs, and co-curricular engagement.
+          </p>
         </div>
         <div class="student-life-grid">
           <article class="student-life-card">
             <img src="images/leadership.jpg" alt="Student leadership activities">
-            <div>
-              <h4>Leadership and Discipline</h4>
+            <div class="student-life-content">
+              <h4><span class="material-symbols-outlined" aria-hidden="true">military_tech</span>Leadership and Discipline</h4>
               <p>
                 The school promotes discipline, responsibility, and servant leadership
                 through mentorship, prefect structures, and guided personal development.
               </p>
+              <div class="student-life-meta">
+                <span>Mentorship</span>
+                <span>Student Governance</span>
+              </div>
             </div>
           </article>
           <article class="student-life-card">
             <img src="images/games.jpg" alt="Students participating in sports activities">
-            <div>
-              <h4>Games and Co-Curricular Activities</h4>
+            <div class="student-life-content">
+              <h4><span class="material-symbols-outlined" aria-hidden="true">sports_soccer</span>Games and Co-Curricular Activities</h4>
               <p>
                 Learners participate in sports, clubs, and talent development programs
                 that build confidence, teamwork, and balanced growth.
               </p>
+              <div class="student-life-meta">
+                <span>Clubs</span>
+                <span>Talent Development</span>
+              </div>
             </div>
           </article>
           <article class="student-life-card">
             <img src="images/games1.jpg" alt="Students during games session">
-            <div>
-              <h4>Holistic Growth</h4>
+            <div class="student-life-content">
+              <h4><span class="material-symbols-outlined" aria-hidden="true">self_improvement</span>Holistic Growth</h4>
               <p>
                 Co-curricular engagement complements classroom learning and helps students
                 discover strengths in creativity, communication, and leadership.
               </p>
+              <div class="student-life-meta">
+                <span>Creativity</span>
+                <span>Communication</span>
+              </div>
             </div>
           </article>
         </div>
@@ -174,12 +275,20 @@
 
     <!-- Call to action section -->
     <section class="about-cta reveal-on-scroll">
-      <div class="container about-cta-content">
-        <h3>Discover More Opportunities at Kings College Budo</h3>
-        <p>Explore our programs or contact us to begin your journey.</p>
-        <div class="hero-buttons">
-          <a href="academics.html" class="btn btn-primary">View Programs</a>
-          <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+      <div class="container about-cta-shell">
+        <div class="about-cta-content">
+          <p class="about-cta-tag">Join Our Community</p>
+          <h3>Discover More Opportunities at Kings College Budo</h3>
+          <p>Explore our programs or contact us to begin your journey.</p>
+          <div class="about-cta-points">
+            <p><span class="material-symbols-outlined" aria-hidden="true">school</span>Holistic education</p>
+            <p><span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>Strong values</p>
+            <p><span class="material-symbols-outlined" aria-hidden="true">groups</span>Supportive community</p>
+          </div>
+          <div class="hero-buttons">
+            <a href="academics.html" class="btn btn-primary"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>View Programs</a>
+            <a href="contact.html" class="btn btn-secondary"><span class="material-symbols-outlined" aria-hidden="true">mail</span>Contact Us</a>
+          </div>
         </div>
       </div>
     </section>
@@ -193,32 +302,83 @@
             This website was designed and developed by students as part of a web development project.
           </p>
         </div>
-        <div class="developers-grid">
+        <div class="developers-grid" id="developersGrid">
           <article class="developer-card">
             <img src="images/alpha.png" alt="Developer Alpha">
             <h4>Alpha</h4>
-            <p>Frontend Developer</p>
+            <p class="developer-role">Frontend Developer</p>
+            <div class="developer-tags">
+              <span>UI Components</span>
+              <span>Responsive Layouts</span>
+            </div>
+            <a href="contact.html" class="developer-contact-link">
+              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+              Contact via school office
+            </a>
           </article>
           <article class="developer-card">
             <img src="images/joanjojo.png" alt="Developer Joan">
             <h4>Joan</h4>
-            <p>UI Designer</p>
+            <p class="developer-role">UI Designer</p>
+            <div class="developer-tags">
+              <span>Visual Design</span>
+              <span>UX Structure</span>
+            </div>
+            <a href="contact.html" class="developer-contact-link">
+              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+              Contact via school office
+            </a>
           </article>
           <article class="developer-card">
             <img src="images/judith.png" alt="Developer Judith">
             <h4>Judith</h4>
-            <p>Content Coordinator</p>
+            <p class="developer-role">Content Coordinator</p>
+            <div class="developer-tags">
+              <span>Content Planning</span>
+              <span>Editorial Review</span>
+            </div>
+            <a href="contact.html" class="developer-contact-link">
+              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+              Contact via school office
+            </a>
           </article>
           <article class="developer-card">
             <img src="images/oumo.png" alt="Developer Oumo">
             <h4>Oumo</h4>
-            <p>Frontend Developer</p>
+            <p class="developer-role">Frontend Developer</p>
+            <div class="developer-tags">
+              <span>Interactive Features</span>
+              <span>Performance Tuning</span>
+            </div>
+            <a href="contact.html" class="developer-contact-link">
+              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+              Contact via school office
+            </a>
           </article>
           <article class="developer-card">
             <img src="images/brenda.png" alt="Developer Brenda">
             <h4>Brenda</h4>
-            <p>Project Support</p>
+            <p class="developer-role">Project Support</p>
+            <div class="developer-tags">
+              <span>Coordination</span>
+              <span>Quality Checks</span>
+            </div>
+            <a href="contact.html" class="developer-contact-link">
+              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+              Contact via school office
+            </a>
           </article>
+        </div>
+        <div class="developers-controls" aria-label="Developers navigation">
+          <button type="button" class="developer-nav-btn" id="developersPrev">
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+            Previous
+          </button>
+          <p class="developers-status" id="developersStatus" aria-live="polite"></p>
+          <button type="button" class="developer-nav-btn" id="developersNext">
+            Next
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+          </button>
         </div>
       </div>
     </section>
@@ -226,30 +386,70 @@
 
   <!-- Footer section -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Contact Information</h4>
-        <p>Kampala, Uganda</p>
-        <p>Phone: +256 700 000 000</p>
-        <p>Email: info@schoolname.com</p>
+    <div class="container footer-top">
+      <div class="footer-col footer-brand">
+        <div class="footer-logo-row">
+          <img src="images/logo.jpg" alt="Kings College Budo logo" class="footer-logo">
+          <div>
+            <h4>Kings College, Budo</h4>
+            <p class="footer-motto">Gakyali Mabaga</p>
+          </div>
+        </div>
+        <p class="footer-description">
+          Kings College, Budo is a prestigious secondary school in Uganda established in 1906.
+        </p>
       </div>
-      <div>
+
+      <div class="footer-col">
         <h4>Quick Links</h4>
-        <ul>
+        <ul class="footer-links">
+          <li><a href="home.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="academics.html">Academics</a></li>
           <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reels.html">Reels</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-      <div>
+
+      <div class="footer-col">
         <h4>Follow Us</h4>
-        <ul>
+        <ul class="footer-links">
           <li><a href="#">Facebook</a></li>
           <li><a href="#">X (Twitter)</a></li>
           <li><a href="#">Instagram</a></li>
           <li><a href="#">YouTube</a></li>
         </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Admissions</h4>
+        <p class="footer-description">Reach out for enrollment guidance and support.</p>
+        <a href="contact.html" class="footer-mini-cta">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="container footer-contact-strip">
+      <div class="footer-contact-card">
+        <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+        <div>
+          <h5>Visit Us</h5>
+          <p>Kampala, Uganda</p>
+        </div>
+      </div>
+      <div class="footer-contact-card">
+        <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+        <div>
+          <h5>Email Us</h5>
+          <p>info@kcb.com</p>
+        </div>
+      </div>
+      <div class="footer-contact-card">
+        <span class="material-symbols-outlined" aria-hidden="true">call</span>
+        <div>
+          <h5>Call Us</h5>
+          <p>+256 414 373760</p>
+        </div>
       </div>
     </div>
     <p class="copyright">&copy; 2026 Kings College Budo. All rights reserved.</p>
